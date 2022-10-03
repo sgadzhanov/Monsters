@@ -1,0 +1,27 @@
+React concepts: 
+1: Don't touch the DOM. I will do it for you!
+    - You can build web interfaces without touching the DOM :)
+2: Build websites like Lego blocks.
+    - Components architecture: we can have some data about our app,
+    and then we build our components out of HTML tags that signify component.
+    Each of these components work to have our app.
+    It a key concept because it lets us reuse and share along different 
+    files and projects.
+3: Unidirectional data flow.
+    - The child components are not able to update the data that is coming from the parent component;
+    - In React, data that is coming from parent components is called props;
+    - A state is always owned by one component. Any changes made by this state can only affect
+    the components below, i.e its children. Changing state on a component will never affect 
+    its parent or its siblings, only the children will be affected.
+4: UI, the rest is up to you!
+
+HOW to become a good React developer:
+    1- Decide on Components.
+    - what is a component; how much do we want to break a component;
+    - how do we build these reusable components;
+    - it is very important skill to know how to break the app into different components.
+    2- Decide the State and where it lives.
+    - it is very importing to decide where to put the state in architecting the app;
+    3- What changes when state changes.
+    - we need to decide what to re-render, what part of the virtual DOM changes;
+    - it has a huge effect on performance.
