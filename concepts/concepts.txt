@@ -7,6 +7,7 @@ React concepts:
     Each of these components work to have our app.
     It a key concept because it lets us reuse and share along different 
     files and projects.
+    What is a component - self contained representation of html, css and javascript.
 3: Unidirectional data flow.
     - The child components are not able to update the data that is coming from the parent component;
     - In React, data that is coming from parent components is called props;
