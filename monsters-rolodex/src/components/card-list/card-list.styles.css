@@ -1,0 +1,14 @@
+.card-container {
+    display: inline-block;
+    border: darkgray thin;
+    border-radius: 0.2cm;
+    margin: 6px;
+    padding: 10px;
+    background-color: darkcyan;
+    
+}
+
+.card-container:hover {
+    background-color: royalblue;
+    cursor: pointer;
+}

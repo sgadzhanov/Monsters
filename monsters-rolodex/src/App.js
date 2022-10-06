@@ -1,7 +1,9 @@
 import { Component } from 'react'
-import logo from './logo.svg';
 import './App.css';
+import './components/card-list/card-list.component'
 
+import CardList from './components/card-list/card-list.component'
+import SearchBox from './components/search-box/search-box.component'
 
 class App extends Component {
   constructor() {
@@ -23,31 +25,30 @@ class App extends Component {
       }));
   }
 
+  onSearchChange = event => {
+    const filter = event.target.value.toLowerCase();
+    this.setState(() => {
+      return { filter }
+    })
+  }
+
   render() {
     console.log('render');
 
     const filteredMonsters = this.state.monsters.filter(m => {
       const [firstName, lastName] = m.name.split(' ');
 
-      return firstName.toLowerCase().startsWith(this.state.filter) || lastName.toLowerCase().startsWith(this.state.filter)
+      return firstName.toLowerCase().startsWith(this.state.filter) 
+        || lastName.toLowerCase().startsWith(this.state.filter);
     });
 
     return (
       <div className="App">
-        <input
-          className='search-box'
-          type='search'
+        <SearchBox
+          onChangeHandler={this.onSearchChange}
           placeholder='search monsters'
-          onChange={event => {
-            const filter = event.target.value.toLowerCase();
-            this.setState(() => {
-              return { filter }
-            })
-          }}
-        />
-        <div>
-          {filteredMonsters.map(m => <h1 key={m.id}>{m.name}</h1>)}
-        </div>
+          className='monsters-search-box' />
+        <CardList className='monsters-card' monsters={filteredMonsters} />
       </div>
     );
   }

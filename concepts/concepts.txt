@@ -8,6 +8,9 @@ React concepts:
     It a key concept because it lets us reuse and share along different 
     files and projects.
     What is a component - self contained representation of html, css and javascript.
+    Components re-render on two conditions:
+        - when setState get called;
+        - when props get updated.
 3: Unidirectional data flow.
     - The child components are not able to update the data that is coming from the parent component;
     - In React, data that is coming from parent components is called props;
