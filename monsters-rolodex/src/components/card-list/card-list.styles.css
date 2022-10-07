@@ -1,15 +1,7 @@
-.card-container {
-    display: inline-block;
-    border: darkgray thin;
-    border-radius: 0.2cm;
-    margin: 6px;
-    padding: 10px;
-    background-color: darkcyan;
-    
-}
-
-.card-container:hover {
-    background-color: royalblue;
-    cursor: pointer;
-    
+.card-list {
+    width: 85vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
 }

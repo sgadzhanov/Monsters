@@ -38,17 +38,18 @@ class App extends Component {
     const filteredMonsters = this.state.monsters.filter(m => {
       const [firstName, lastName] = m.name.split(' ');
 
-      return firstName.toLowerCase().startsWith(this.state.filter) 
+      return firstName.toLowerCase().startsWith(this.state.filter)
         || lastName.toLowerCase().startsWith(this.state.filter);
     });
 
     return (
       <div className="App">
+        <h1 className='app-title'>Monsters Rolodex</h1>
         <SearchBox
           onChangeHandler={this.onSearchChange}
-          placeholder='search monsters'
+          placeholder='search monster user'
           className='monsters-search-box' />
-        <CardList className='monsters-card' monsters={filteredMonsters} />
+        <CardList monsters={filteredMonsters} />
       </div>
     );
   }
