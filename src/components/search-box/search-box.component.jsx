@@ -2,14 +2,14 @@ import { Component } from "react";
 
 import './search-box.styles.css'
 
-const SearchBox = () => {
+const SearchBox = (props) => {
 
     return (
         <input
-            className={`search-box ${this.props.className}`}
+            className={`search-box ${props.className}`}
             type='search'
-            placeholder={this.props.placeholder}
-            onChange={this.props.onChangeHandler}
+            placeholder={props.placeholder}
+            onChange={props.onChangeHandler}
         />
     )
 }
