@@ -5,19 +5,6 @@ import './components/card-list/card-list.component'
 import CardList from './components/card-list/card-list.component'
 import SearchBox from './components/search-box/search-box.component'
 
-// const App = () => {
-//   return (
-//     <div className="App">
-//       <h1 className='app-title'>Monsters Rolodex</h1>
-//       {/* <SearchBox
-//         onChangeHandler={this.onSearchChange}
-//         placeholder='search monster user'
-//         className='monsters-search-box' />
-//       <CardList monsters={filteredMonsters} /> */}
-//     </div>
-//   )
-// }
-
 class App extends Component {
   constructor() {
     super();
